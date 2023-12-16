@@ -9,8 +9,8 @@ def index():
     return render_template('upload_excel.html')
 
 
-@app.route('/upload-excel', methods=['POST'])
-def upload_excel():
+@app.route('/upload_excel', methods=['POST'])
+def handle_upload():
     if 'file' not in request.files:
         return jsonify({'error': 'No file uploaded'})
     
